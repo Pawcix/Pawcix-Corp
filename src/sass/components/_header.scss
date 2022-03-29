@@ -1,0 +1,87 @@
+//HEADER :
+
+.header {
+    color: white;
+
+    &__img {
+        position: relative;
+        height: 100vh;
+        background-image: url("/dist/img/logo-1920.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: 0;
+    }
+
+    &__shadow {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0, .85);
+        z-index: -10;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        height: 100%;
+        z-index: 5;
+        
+
+        h1 {
+            font-size: 5rem;
+            padding-bottom: 15px;
+            
+        }
+
+        p {
+            font-size: 1.8rem;
+            padding-top: 10px;
+        }
+
+    }
+
+    &__line {
+        width: 40vw;
+        height: 5px;
+        background-color: red;
+    }
+
+    .fa-circle-down {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 30px;
+        font-size: 50px;
+        border: none;
+        color: white;
+        transition: color .4s;
+        cursor: pointer;
+    }
+
+    .fa-circle-down:hover {
+        color:red;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        h1 {
+            font-size: 6.6rem;
+        }
+
+        p {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        background-image: url('/dist/img/header-bgc-640.jpg');
+    }
+}

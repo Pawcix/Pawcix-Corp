@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-size: 1.6rem;
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(360deg, rgba(50, 0 ,0, 0.97), rgba(250,0,0, 0.97));
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+}

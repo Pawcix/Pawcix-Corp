@@ -1,0 +1,348 @@
+.about_heading {
+    background-image: linear-gradient(0.5turn, rgb(0,0,0),rgb(150,0,0), rgb(0,0,0));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+
+        &__left {
+            width: 50%;
+            height: 500px;
+            background-image: url('/src/img/ja.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            border: 2px solid black;
+            box-shadow: 5px 5px 10px black;
+        }
+
+        &__right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: auto;
+            padding: 2em;
+            border-radius: 20px;
+            margin-left: -50px;
+            color: white;
+            border: 2px solid black;
+            box-shadow: 5px 5px 10px black;
+            background-image: linear-gradient(360deg, rgb(100, 0, 0), rgb(0, 0, 0));
+
+            &--content {
+
+                h2 {
+                    font-size: 3.6rem;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                }
+            
+                h2::after {
+                    display: block;
+                    height: 3px;
+                    width: 10vw;
+                    margin: 20px auto 50px;
+                    background-color: red;
+                    content: '';
+                }
+
+                p {
+                    margin: 20px 0;
+                    font-size: 1.6rem;
+                }
+
+                a {
+                    display: inline-block;
+                    padding: 20px 40px;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: white;
+                    transition: .5s;
+                    background-color: rgb(0, 0, 0);
+                }
+
+                a:hover {
+                    color: black;
+                    background-color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+}
+
+.offerts {
+    position: relative;
+    text-align: center;
+    padding: 50px;
+    min-height: 100vh;
+    background-image: url("/src/img/oferta-1920.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    .offert__shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, 0.85);
+        z-index: -5;
+    }
+
+    h2 {
+        display: inline-block;
+        font-size: 3.6rem;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    h2::after {
+        display: block;
+        height: 3px;
+        width: 10vw;
+        margin: 20px auto 50px;
+        background-color: red;
+        content: '';
+    }
+
+    &__box {
+        display: inline-block;
+        width: calc(100%/3);
+        margin: 0 -2px;
+        padding: 1em;
+        color: white;
+        transition: .3s;
+        cursor: pointer;
+
+        i {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            border: 3px solid red;
+            padding: 30px;
+            border-radius: 50%;
+        }
+
+
+        h3 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__box:hover {
+        background-color: rgb(150,0,0);
+        border-radius: 10px;
+    }
+}
+
+.contact {
+    background-image: linear-gradient(180deg, rgb(0,0,0), rgb(150, 0, 0));
+    height: auto;
+    width: 100%;
+    padding: 30px;
+    color: white;
+
+    .contact-heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        h2 {
+            font-size: 3.6rem;
+            font-weight: bold;
+        }
+
+        h2::after {
+            display: block;
+            height: 3px;
+            width: 10vw;
+            margin: 20px auto;
+            background-color: red;
+            content: '';
+        }
+    
+
+        p {
+            max-width: 1000px;
+            margin: 10px auto;
+            font-size: 1.6rem;
+        }
+
+        .social {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1em 0;
+
+            li {
+                margin: 0 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                transition: .3s;
+
+                i {
+                    font-size: 4rem;
+                }
+            }
+
+            a:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about_heading {
+
+        .about {
+            flex-direction: column;
+            margin: 20px;
+
+            &__left {
+                width: 100%;
+                height: 320px;
+            }
+
+            &__right {
+                width: 90%;
+                margin: 0;
+                margin-top: -50px;
+
+                h2 {
+                    font-size: 2.6rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                }
+
+                a {
+                    font-size: 1.4rem;
+                    padding: 15px 30px;
+                }
+            }
+        }
+    } 
+
+    .contact {
+        .contact-heading {
+
+            h2 {
+                font-size: 2.6rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+
+            .social {
+
+                a {
+                    i {
+                       font-size: 3rem; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:992px ) {
+
+    .about_heading {
+
+        .about {
+
+            &__right {
+
+                h2 {
+                    font-size: 2.6rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                }
+
+                a {
+                    font-size: 1.4rem;
+                    padding: 15px 30px;
+                }
+            }
+        }
+    } 
+    .offerts {
+        background-image: url("/src/img/oferta-640.jpg");
+
+        h2 {
+            font-size: 2.6rem;
+        }
+
+        &__box {
+            width: 100%;
+
+            i {
+                font-size: 3rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .contact {
+        .contact-heading {
+
+            h2 {
+                font-size: 2.6rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+
+            .social {
+
+                a {
+                    i {
+                       font-size: 3rem; 
+                    }
+                }
+            }
+        }
+    }
+}
+
